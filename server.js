@@ -1,9 +1,9 @@
-var express = require("express").Router();
+var express = require("express");
 
 var app = express();
 var PORT = process.env.PORT || 3000;
-var apiRoutes = require("./routes/apiRoutes")(app);
-var htmlRoutes = require("./routes/htmlRoutes")(app);
+var apiRoutes = require("./routes/apiRoutes");
+var htmlRoutes = require("./routes/htmlRoutes");
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));

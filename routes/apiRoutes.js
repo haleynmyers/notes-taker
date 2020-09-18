@@ -1,14 +1,14 @@
 var db = require("../db/db.json");
 var fs = require("fs");
+var express = require("express");
+var app = express();
 
-module.exports = function(app){
-
-    app.get("/api/notes", function(req, res) {
+    app.get("/notes", function(req, res) {
         db = JSON.parse(fs.readFileSync("./db/db.json", "utf8"));
         res.json(db);
     });
 
-    app.post("/api/notes", function(req, res) {
+    app.post("/notes", function(req, res) {
         var newNote = {
             id: Math.floor(Math.random() * 100),
             title: req.body.title,
@@ -23,7 +23,7 @@ module.exports = function(app){
         res.json(db);
     });
 
-    app.delete("/api/notes/:id", function(req, res) {
+    app.delete("/notes/:id", function(req, res) {
         var undeletedNotes = [];
         for (var i = 0; i < db.length; i++) {
             if (db[i].id != req.params.id) {
@@ -39,5 +39,4 @@ module.exports = function(app){
         console.log("Delete", db);
         res.json(db);
     });
-
-};
+module.exports = app;
