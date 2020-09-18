@@ -23,7 +23,6 @@ If you wish to clone the code locally, you will need to run
 Used the deployed site provided above.
 
 ## License
-MIT
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## Contributing
