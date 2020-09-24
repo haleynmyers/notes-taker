@@ -3,6 +3,8 @@
 ## Description
 Add a note by clicking the save icon. The title will appear in a list on the left. When you want to view a note, click on the title. You can delete the note by clicking the trashcan icon. 
 
+![Note Take Demo](public/assets/note-taker-demo.gif)
+
 ## Table of Contents
 * [Deployed Link](#deployed-link)
 * [Installation](#installation)
